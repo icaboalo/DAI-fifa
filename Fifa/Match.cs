@@ -91,6 +91,21 @@ namespace Fifa
             return res;
         }
 
+        public List<Match> SearchMatches() {
+            List<Match> list = new List<Match>();
+
+            SqlConnection con = Connection.addConnection();
+
+            SqlCommand cmd = new SqlCommand(String.Format("SELECT * FROM partido WHERE date = '{0}'", this.date), con);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read()) {
+                list.Add(new Match(reader.GetInt16(0), new Team(reader.GetInt16(1)), new Team(reader.GetInt16(2)), reader.GetString(3)));
+            }
+
+            return list;
+        }
+
         public override string ToString() {
             return this.date;
         }

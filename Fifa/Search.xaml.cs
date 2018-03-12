@@ -23,6 +23,41 @@ namespace Fifa
         public Search()
         {
             InitializeComponent();
+            cbSelection.Items.Add("Partido");
+            cbSelection.Items.Add("Jugador");
+            cbSelection.SelectedIndex = 0;
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            dgResult.Items.Clear();
+            if (cbSelection.SelectedItem.ToString() == "Partido") {
+                lbName.Visibility = Visibility.Hidden;
+                tbName.Visibility = Visibility.Hidden;
+                lbDate.Visibility = Visibility.Visible;
+                dpDate.Visibility = Visibility.Visible;
+            } else if (cbSelection.SelectedItem.ToString() == "Jugador") {
+                lbName.Visibility = Visibility.Visible;
+                tbName.Visibility = Visibility.Visible;
+                lbDate.Visibility = Visibility.Hidden;
+                dpDate.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+            switch(cbSelection.SelectedItem.ToString()) {
+                case "Partido":
+                    List<Match> matchList = new Match(dpDate.Text).SearchMatches();
+                    for (int i = 0; i < matchList.Count; i++) {
+                        dgResult.Items.Add(matchList[i]);
+                    }
+                    break;
+                case "Jugador":
+                    List<Player> playerList = new Player(tbName.Text).SearchPlayers();
+                    for (int i = 0; i < playerList.Count; i++) {
+                        dgResult.Items.Add(playerList[i]);
+                    }
+                    break;
+            }
         }
     }
 }
