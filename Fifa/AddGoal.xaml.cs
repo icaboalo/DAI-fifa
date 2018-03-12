@@ -36,12 +36,12 @@ namespace Fifa
 
         private void cbMatch_SelectionChanged(object sender, SelectionChangedEventArgs e) {
             if (cbMatch.SelectedIndex > 0) {
-                Match match = new Match();
+                Match match = new Match(cbMatch.SelectedItem.ToString());
 
                 cbTeam.Items.Clear();
                 cbTeam.Items.Add("Selecciona una opción");
 
-                List<Team> teams = match.loadTeams();
+                List<Team> teams = match.LoadTeams();
                 for (int i = 0; i < teams.Count(); i++) {
                     cbTeam.Items.Add(teams[i].name);
                 }

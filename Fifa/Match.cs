@@ -19,6 +19,10 @@ namespace Fifa
             this.date = date;
         }
 
+        public Match(String date) {
+            this.date = date;
+        }
+
         public List<Team> LoadTeams() {
             this.teams = new List<Team>();
             SqlConnection con = Connection.addConnection();
