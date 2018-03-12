@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Fifa.AddMatch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Fifa"
+             mc:Ignorable="d" Height="212.09" Width="377.664">
+    <Grid>
+        <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="18,168,0,0"/>
+        <Label Content="Fecha de partido (DD/MM/YY):" HorizontalAlignment="Left" Margin="109,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448"/>
+        <ComboBox x:Name="cbVisit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="246,168,0,0"/>
+        <Label Content="Equipo 1:" HorizontalAlignment="Left" Margin="18,137,0,0" VerticalAlignment="Top"/>
+        <Label Content="Equipo 2:" HorizontalAlignment="Left" Margin="246,137,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbFecha" HorizontalAlignment="Left" Height="23" Margin="138,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Añadir partido" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,10,0,0" FontWeight="Bold" FontSize="18"/>
+    </Grid>
+</UserControl>
