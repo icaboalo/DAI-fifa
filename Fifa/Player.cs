@@ -18,5 +18,9 @@ namespace Fifa
             this.position = position;
             this.teamId = teamId;
         }
+
+        public override string ToString() {
+            return this.num + " - " + this.name;
+        }
     }
 }

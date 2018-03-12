@@ -14,6 +14,12 @@ C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\Fifa.cs
 C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\Fifa.exe
 C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\Fifa.pdb
 C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\Menu.g.cs
-C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\MainMenu.g.cs
 C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\Menu.baml
-C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\MainMenu.baml
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\AddGoal.g.cs
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\AddMatch.g.cs
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\ModifyMatch.g.cs
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\Search.g.cs
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\AddGoal.baml
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\AddMatch.baml
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\ModifyMatch.baml
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\Search.baml

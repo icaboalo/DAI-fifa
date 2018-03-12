@@ -23,6 +23,16 @@ namespace Fifa
         public AddMatch()
         {
             InitializeComponent();
+            //Connection.LoadTeams(cbLocal);
+            //Connection.LoadTeams(cbVisit);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+            if (new Match((cbLocal.SelectedItem as Team), (cbVisit.SelectedItem as Team), dpDate.Text).SaveMatch() > 0) {
+                MessageBox.Show("Partido guardado!");
+            } else {
+                MessageBox.Show("Ocurrió un error al guardar");
+            }
         }
     }
 }

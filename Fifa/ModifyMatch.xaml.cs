@@ -23,6 +23,15 @@ namespace Fifa
         public ModifyMatch()
         {
             InitializeComponent();
+            Connection.LoadMatches(cbMatch);
+        }
+
+        private void tbModificar_Click(object sender, RoutedEventArgs e) {
+            if ((cbMatch.SelectedItem as Match).UpdateMatch(dpDate.Text) > 0) {
+                MessageBox.Show("Se actualizó el partido!");
+            } else {
+                MessageBox.Show("Ocurrió un error al guardar");
+            }
         }
     }
 }

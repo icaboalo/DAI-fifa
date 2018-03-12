@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fifa"
         mc:Ignorable="d"
-        Title="Menu" Height="279.208" Width="602.475">
+        Title="Menu" Height="582.208" Width="806.475">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="160"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Button Name="btAddMatch" Grid.Column="0" Content="Añadir partido" HorizontalAlignment="Center" Margin="24,37,0,0" VerticalAlignment="Top" Width="90" Click="ButtonAddMatch_Click"/>
         <Button Name="btSearch" Grid.Column="0" Content="Buscar" HorizontalAlignment="Center" Margin="31,87,10,0" VerticalAlignment="Top" Width="90" Click="ButtonSearch_Click"/>
         <Button Name="btModifyPlayer" Grid.Column="0" Content="Modificar partido" HorizontalAlignment="Center" Margin="32,62,9,0" VerticalAlignment="Top" Width="90" Click="ButtonModifyMatch_Click"/>
-        <Button Name="btAddGol" Grid.Column="0" Content="Añadir Gol" HorizontalAlignment="Center" Margin="32,112,9,0" VerticalAlignment="Top" Width="90" Click="ButtonAddGoal_Click"/>
+        <Button Name="btAddGoal" Grid.Column="0" Content="Añadir Gol" HorizontalAlignment="Center" Margin="32,112,9,0" VerticalAlignment="Top" Width="90" Click="ButtonAddGoal_Click"/>
         <Grid Name="gContent" Grid.Column="1">
 
         </Grid>

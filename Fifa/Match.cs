@@ -9,9 +9,14 @@ namespace Fifa
 {
     class Match
     {
-        Team local, visit;
-        String date;
+        public Int16 id;
+        public Team local, visit;
+        public String date;
         List<Team> teams;
+
+        public Match(Int16 id, Team local, Team visit, String date): this(local, visit, date) {
+            this.id = id;
+        }
 
         public Match(Team local, Team visit, String date) {
             this.local = local;
@@ -37,17 +42,45 @@ namespace Fifa
             return this.teams;
         }
 
-        public int SaveMatch(String localName, String visitName, String date) {
+        public int SaveMatch() {
             int res;
             SqlConnection con = Connection.addConnection();
             con.Open();
 
-            SqlCommand cmd = new SqlCommand(String.Format("INSERT INTO partido VALUES('{0}', (SELECT id FROM equipo WHERE nombre = '{1}'), (SELECT id From equipo WHERE nombre = '{2}'))", 
-                date, localName, visitName), con);
+            SqlCommand cmd = new SqlCommand(String.Format("INSERT INTO partido VALUES('{0}', {1}), {2}))", 
+                this.date, this.local.id, this.visit.id), con);
 
             res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
+        }
+
+        public int SaveGoal(int minute, Int16 playerId) {
+            int res;
+            SqlConnection con = Connection.addConnection();
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(String.Format("INSESRT INTO gol VALUES({0}, {1}, {2})", minute, playerId, this.id), con);
+
+            res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+
+        public int UpdateMatch(String date) {
+            int res;
+            SqlConnection con = Connection.addConnection();
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(String.Format("UPDATE partido SET fecha = '{0}' WHERE id = {1}", date, this.id), con);
+
+            res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+
+        public override string ToString() {
+            return this.date;
         }
     }
 }

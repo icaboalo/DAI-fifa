@@ -13,6 +13,10 @@ namespace Fifa
         public String name;
         public List<Player> players;
 
+        public Team(Int16 id) {
+            this.id = id;
+        }
+
         public Team(String name) {
             this.name = name;
         }
@@ -32,6 +36,10 @@ namespace Fifa
             }
 
             return this.players;
+        }
+
+        public override string ToString() {
+            return this.name;
         }
     }
 }

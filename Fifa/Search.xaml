@@ -13,7 +13,7 @@
             <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="nombre" Content="nombre" HorizontalAlignment="Left" Margin="45,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,2.5" Grid.Column="1"/>
-        <Button Content="buscar" HorizontalAlignment="Left" Margin="115.5,149,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Grid.Column="1" />
+        <Button Content="buscar" HorizontalAlignment="Left" Margin="115.5,149,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" />
         <DataGrid x:Name="dgDatos" HorizontalAlignment="Left" Margin="74,188,0,0" VerticalAlignment="Top" Height="300" Width="400" Grid.ColumnSpan="2"/>
         <ComboBox HorizontalAlignment="Left" Margin="107.5,57,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <Label x:Name="fecha" Content="fecha" HorizontalAlignment="Left" Margin="45,104,0,0" VerticalAlignment="Top" Grid.Column="1"/>
