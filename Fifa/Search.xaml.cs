@@ -29,7 +29,6 @@ namespace Fifa
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-            dgResult.Items.Clear();
             if (cbSelection.SelectedItem.ToString() == "Partido") {
                 lbName.Visibility = Visibility.Hidden;
                 tbName.Visibility = Visibility.Hidden;
@@ -47,14 +46,18 @@ namespace Fifa
             switch(cbSelection.SelectedItem.ToString()) {
                 case "Partido":
                     List<Match> matchList = new Match(dpDate.Text).SearchMatches();
-                    for (int i = 0; i < matchList.Count; i++) {
-                        dgResult.Items.Add(matchList[i]);
+                    dgResult.ItemsSource = matchList;
+                    if (matchList.Count() == 0)
+                    {
+                        MessageBox.Show("No habia datos");
                     }
                     break;
                 case "Jugador":
                     List<Player> playerList = new Player(tbName.Text).SearchPlayers();
-                    for (int i = 0; i < playerList.Count; i++) {
-                        dgResult.Items.Add(playerList[i]);
+                    dgResult.ItemsSource = playerList;
+                    if (playerList.Count() == 0)
+                    {
+                        MessageBox.Show("No habia datos");
                     }
                     break;
             }

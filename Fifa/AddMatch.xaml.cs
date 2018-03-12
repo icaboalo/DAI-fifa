@@ -23,8 +23,8 @@ namespace Fifa
         public AddMatch()
         {
             InitializeComponent();
-            //Connection.LoadTeams(cbLocal);
-            //Connection.LoadTeams(cbVisit);
+            Connection.LoadTeams(cbLocal);
+            Connection.LoadTeams(cbVisit);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {

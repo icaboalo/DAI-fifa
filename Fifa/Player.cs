@@ -9,9 +9,10 @@ namespace Fifa
 {
     class Player
     {
-        public Int16 num;
-        public String name, position;
-        public Int16 teamId;
+        public Int16 num { get; set; }
+        public String name { get; set; }
+        public String position { get; set; }
+        public Int16 teamId { get; set; }
 
         public Player(Int16 num, String name, String position, Int16 teamId) {
             this.num = num;
@@ -34,7 +35,7 @@ namespace Fifa
             while(reader.Read()) {
                 list.Add(new Player(reader.GetInt16(0), reader.GetString(1), reader.GetString(2), reader.GetInt16(3)));
             }
-
+            con.Close();
             return list;
         }
 

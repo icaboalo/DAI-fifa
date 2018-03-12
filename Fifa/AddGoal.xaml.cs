@@ -75,10 +75,14 @@ namespace Fifa
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) {
-            if ((cbMatch.SelectedItem as Match).SaveGoal(int.Parse(tbMinute.Text), (cbPlayer.SelectedItem as Player).num) > 0) {
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if ((cbMatch.SelectedItem as Match).SaveGoal(int.Parse(tbMinute.Text), (cbPlayer.SelectedItem as Player).num) > 0)
+            {
                 MessageBox.Show("Gol registrado!");
-            } else {
+            }
+            else
+            {
                 MessageBox.Show("Ocurrió un error al guardar");
             }
         }

@@ -15,7 +15,6 @@ namespace Fifa {
         public User(String username, String password) {
             this.username = username;
             this.password = password;
-            MessageBox.Show(hashPassword(password));
         }
 
         private String hashPassword(String password) {
@@ -32,13 +31,14 @@ namespace Fifa {
 
         public bool Login() {
             SqlConnection con = Connection.addConnection();
-            con.Open();
-            SqlCommand cmd = new SqlCommand(String.Format("SELECT password FROM user WHERE username = '{0}'", 
+
+            SqlCommand cmd = new SqlCommand(String.Format("SELECT password FROM usuario WHERE username = '{0}'", 
                 this.username), con);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
             
-            if (reader.GetString(0) != hashPassword(this.password)) {
+            // if (reader.GetString(0) != hashPassword(this.password)) {
+            if (reader.GetString(0) != this.password) { 
                 con.Close();
                 return false;
             }

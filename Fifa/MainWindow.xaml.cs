@@ -25,15 +25,12 @@ namespace Fifa {
         private void Button_Click(object sender, RoutedEventArgs e) {
             User user = new User(tbUsername.Text, tbPassword.Text);
 
-            new Menu().Show();
-            this.Close();
-
-            /*if (!user.Login()) {
+            if (!user.Login()) {
                 MessageBox.Show("Credenciales incorrectas");
             } else {
                 new Menu().Show();
                 this.Close();               
-            }*/
+            }
         }
     }
 }
