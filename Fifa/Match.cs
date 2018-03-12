@@ -28,7 +28,7 @@ namespace Fifa
             SqlConnection con = Connection.addConnection();
             con.Open();
             // "SELECT * FROM equipo INNER JOIN partido ON equipo.id = partido.idLocal OR partido.idVisitante WHERE partido.fecha = '{0}';"
-            SqlCommand cmd = new SqlCommand(String.Format("SELECT equipo.* FROM equipo, partido WHERE partido.fecha = '{0}' AND equipo.id = partido.idLocal OR equipo.id = partido.Visitante", this.date), con);
+            SqlCommand cmd = new SqlCommand(String.Format("SELECT DISTINCT equipo.* FROM equipo, partido WHERE partido.fecha = '{0}' AND equipo.id = partido.idLocal OR equipo.id = partido.idVisitante", this.date), con);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read()) {
                 teams.Add(new Team(reader.GetInt16(0), reader.GetString(1)));
