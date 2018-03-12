@@ -41,5 +41,13 @@ namespace Fifa {
         private void ButtonAddGoal_Click(object sender, RoutedEventArgs e) {
             SwapFragment(new AddGoal());
         }
+
+        private void ButtonDeleteMatch_Click(object sender, RoutedEventArgs e) {
+            SwapFragment(new DeleteMatch());
+        }
+
+        private void ButtonExit_Click(object sender, RoutedEventArgs e) {
+            this.Close();
+        }
     }
 }

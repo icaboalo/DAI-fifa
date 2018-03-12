@@ -15,6 +15,8 @@
         <Button Name="btSearch" Grid.Column="0" Content="Buscar" HorizontalAlignment="Center" Margin="31,87,10,0" VerticalAlignment="Top" Width="90" Click="ButtonSearch_Click"/>
         <Button Name="btModifyPlayer" Grid.Column="0" Content="Modificar partido" HorizontalAlignment="Center" Margin="32,62,9,0" VerticalAlignment="Top" Width="90" Click="ButtonModifyMatch_Click"/>
         <Button Name="btAddGoal" Grid.Column="0" Content="Añadir Gol" HorizontalAlignment="Center" Margin="32,112,9,0" VerticalAlignment="Top" Width="90" Click="ButtonAddGoal_Click"/>
+        <Button Name="btDeleteMatch" Grid.Column="0" Content="Eliminar Partido" HorizontalAlignment="Center" Margin="47,137,24,0" VerticalAlignment="Top" Width="90" Click="ButtonDeleteMatch_Click"/>
+        <Button Name="btExit" Grid.Column="0" Content="Salir" HorizontalAlignment="Center" Margin="46,495,25,0" VerticalAlignment="Top" Width="90" Click="ButtonExit_Click"/>
         <Grid Name="gContent" Grid.Column="1">
 
         </Grid>

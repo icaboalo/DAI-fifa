@@ -79,6 +79,18 @@ namespace Fifa
             return res;
         }
 
+        public int DeleteMatch() {
+            int res;
+            SqlConnection con = Connection.addConnection();
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(String.Format("DELETE FROM partido WHERE id = {0}", this.id), con);
+
+            res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+
         public override string ToString() {
             return this.date;
         }
