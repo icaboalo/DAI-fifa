@@ -5,12 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fifa"
         mc:Ignorable="d"
-        Title="MainWindow" Height="218.317" Width="292.079">
+        Title="MainWindow" Height="368.356" Width="334.275">
     <Grid>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="183,138,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Label Content="Usuario :" HorizontalAlignment="Left" Margin="25,22,0,0" VerticalAlignment="Top"/>
-        <Label Content="Contraseña :" HorizontalAlignment="Left" Margin="25,75,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" Height="23" Margin="101,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" Height="23" Margin="106,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Login" HorizontalAlignment="Left" Margin="117,284,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" FontWeight="Bold" BorderBrush="#FF7C0219">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+
+        <Label Content="Usuario :" HorizontalAlignment="Left" Margin="25,160,0,0" VerticalAlignment="Top" Background="White" Foreground="#FF7C0219" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+
+        <Label Content="Contraseña :" HorizontalAlignment="Left" Margin="25,213,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+
+        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" Height="23" Margin="101,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+
+        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" Height="23" Margin="106,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS"/>
+        <Image Margin="25,33,37,216" Source="imagen_1.jpg" Stretch="Fill"/>
+
+
     </Grid>
 </Window>

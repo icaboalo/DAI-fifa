@@ -13,7 +13,7 @@ namespace Fifa {
 		public static SqlConnection addConnection() {
             SqlConnection connection;
 			try {
-                connection = new SqlConnection("Data Source=CC102-28;Initial Catalog=fifa;Persist Security Info=True;User ID=sa;Password=sqladmin");
+                connection = new SqlConnection("Data Source=localhost;Initial Catalog=fifa;Integrated Security=True");
                 connection.Open();
             } catch (Exception e)
             {

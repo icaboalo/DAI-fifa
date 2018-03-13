@@ -4,22 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Fifa"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Margin="0,0,272,-65">
+             mc:Ignorable="d" d:DesignWidth="800" Height="432.689">
+    <Grid Margin="0,0,10,10">
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="96*"/>
-            <ColumnDefinition Width="413*"/>
-            <ColumnDefinition Width="47*"/>
+
+            <ColumnDefinition Width="127*"/>
+
+            <ColumnDefinition Width="363*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="46*"/>
+
+            <ColumnDefinition Width="62*"/>
+
         </Grid.ColumnDefinitions>
-        <Label Name="lbName" Content="nombre" HorizontalAlignment="Left" Margin="45,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,2.5" Grid.Column="1"/>
-        <Button Content="buscar" HorizontalAlignment="Left" Margin="115.5,149,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="Button_Click" />
-        <DataGrid Name="dgResult" HorizontalAlignment="Left" Margin="74,188,0,0" VerticalAlignment="Top" Height="300" Width="400" Grid.ColumnSpan="2"/>
-        <ComboBox Name="cbSelection" HorizontalAlignment="Left" Margin="107.5,57,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" SelectionChanged="ComboBox_SelectionChanged"/>
-        <Label Name="lbDate" Content="fecha" HorizontalAlignment="Left" Margin="45,104,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <DatePicker Name="dpDate" HorizontalAlignment="Left" Margin="116,106,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05" Grid.Column="1"/>
-        <Label Content="Busqueda" HorizontalAlignment="Left" Margin="115.5,10,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1"/>
-        <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" Margin="116,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+
+        <Label Name="lbName" Content="nombre" HorizontalAlignment="Left" Margin="49,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,2.5" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+
+        <Button Content="buscar" HorizontalAlignment="Left" Margin="134,289,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.ColumnSpan="2" />
+
+        <DataGrid Name="dgResult" HorizontalAlignment="Left" Margin="178,77,0,0" VerticalAlignment="Top" Height="300" Width="400" Grid.ColumnSpan="3" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.Column="1"/>
+
+        <ComboBox Name="cbSelection" HorizontalAlignment="Left" Margin="126,197,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.ColumnSpan="2"/>
+
+        <Label Name="lbDate" Content="fecha" HorizontalAlignment="Left" Margin="62,246,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+
+        <DatePicker Name="dpDate" HorizontalAlignment="Left" Margin="134,246,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05" Grid.ColumnSpan="2"/>
+
+        <Label Content="BUSQUEDA" HorizontalAlignment="Left" Margin="134,150,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.ColumnSpan="2"/>
+
+        <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" Margin="134,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.ColumnSpan="2"/>
+
 
     </Grid>
 </UserControl>

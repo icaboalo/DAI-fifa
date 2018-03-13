@@ -22,6 +22,7 @@ namespace Fifa {
         public Menu(Int16 userId) {
             InitializeComponent();
             this.userId = userId;
+            SwapFragment(new AddMatch(userId));
         }
 
         private void ButtonAddMatch_Click(object sender, RoutedEventArgs e) {

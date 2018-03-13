@@ -7,18 +7,45 @@
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="400">
     <Grid>
-        <ComboBox x:Name="cbTeam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,164,0,0" SelectionChanged="cbTeam_SelectionChanged"/>
-        <Label Content="Minuto del gol:" HorizontalAlignment="Left" Margin="243,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448"/>
-        <ComboBox x:Name="cbPlayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="243,164,0,0" SelectionChanged="cbPlayer_SelectionChanged"/>
-        <Label Content="Nombre de equipo:" HorizontalAlignment="Left" Margin="15,133,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nombre de jugador:" HorizontalAlignment="Left" Margin="243,133,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbMinute" HorizontalAlignment="Left" Height="22" Margin="243,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
-        <Label Content="Añadir gol" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" FontWeight="Bold" FontSize="18"/>
-        <ComboBox x:Name="cbMatch" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,79,0,0" SelectionChanged="cbMatch_SelectionChanged"/>
-        <Label Content="Partido jugado:" HorizontalAlignment="Left" Margin="15,48,0,0" VerticalAlignment="Top"/>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <ComboBox x:Name="cbTeam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,164,0,0" SelectionChanged="cbTeam_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS">
+            <ComboBox.Background>
+                <ImageBrush/>
+            </ComboBox.Background>
+        </ComboBox>
 
-        <Button Width="100" Height="25" Content="Guardar" Margin="138,111,162,64" Click="Button_Click"></Button>
+        <Label Content="Minuto del gol:" HorizontalAlignment="Left" Margin="243,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+
+        <ComboBox x:Name="cbPlayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="243,164,0,0" SelectionChanged="cbPlayer_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS">
+            <ComboBox.Background>
+                <ImageBrush/>
+            </ComboBox.Background>
+        </ComboBox>
+
+        <Label Content="Nombre de equipo:" HorizontalAlignment="Left" Margin="15,133,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+
+        <Label Content="Nombre de jugador:" HorizontalAlignment="Left" Margin="243,133,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+
+        <TextBox x:Name="tbMinute" HorizontalAlignment="Left" Height="22" Margin="243,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+
+        <Label Content="AÑADIR GOL" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" FontSize="18" Background="White" Foreground="#FF7C0219" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+
+        <ComboBox x:Name="cbMatch" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,79,0,0" SelectionChanged="cbMatch_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS">
+            <ComboBox.Background>
+                <ImageBrush/>
+            </ComboBox.Background>
+        </ComboBox>
+
+        <Label Content="Partido jugado:" HorizontalAlignment="Left" Margin="15,48,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
 
 
+
+        <Button Width="100" Height="25" Content="Guardar" Margin="129,224,216.333,79.667" Click="Button_Click" Foreground="#FF7C0219" BorderBrush="#FF7C0219" RenderTransformOrigin="0.5,0.5" FontFamily="Comic Sans MS" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>

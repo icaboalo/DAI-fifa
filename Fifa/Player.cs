@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Fifa
 {
@@ -17,6 +18,7 @@ namespace Fifa
         public int goalCount { get; set; }
 
         public Player(Int16 id, Int16 num, String name, String position, Int16 teamId) {
+            this.id = id;
             this.num = num;
             this.name = name;
             this.position = position;
@@ -47,12 +49,12 @@ namespace Fifa
             int count = 0;
             SqlConnection con = Connection.addConnection();
 
-            SqlCommand cmd = new SqlCommand(String.Format("SELECT COUNT(*) FROM gol WHERE idJugador = {0}", this.id), con);
+            SqlCommand cmd = new SqlCommand(String.Format("SELECT COUNT(*) AS count FROM gol WHERE idJugador = {0}", this.id), con);
 
             SqlDataReader reader = cmd.ExecuteReader();
 
             while(reader.Read()) {
-                count = reader.GetInt16(0);
+                count = reader.GetInt32(0);                
             }
 
             return count;

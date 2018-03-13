@@ -63,6 +63,11 @@
     <Compile Include="DeleteMatch.xaml.cs">
       <DependentUpon>DeleteMatch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="fifaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fifaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Match.cs" />
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
@@ -132,6 +137,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="Connection.cs" />
+    <None Include="fifaDataSet1.xsc">
+      <DependentUpon>fifaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="fifaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fifaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fifaDataSet1.xss">
+      <DependentUpon>fifaDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagen_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagen_1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

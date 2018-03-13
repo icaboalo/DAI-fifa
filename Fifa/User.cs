@@ -35,12 +35,16 @@ namespace Fifa {
             SqlCommand cmd = new SqlCommand(String.Format("SELECT * FROM usuario WHERE username = '{0}'", 
                 this.username), con);
             SqlDataReader reader = cmd.ExecuteReader();
-            reader.Read();
-            
-            // if (reader.GetString(0) != hashPassword(this.password)) {
-            if (reader.GetString(2) != this.password) { 
-                con.Close();
-                return reader.GetInt16(0);
+            while (reader.Read())
+            {
+                // if (reader.GetString(0) != hashPassword(this.password)) {
+                if (reader.GetString(2).Equals(this.password))
+                {
+                    Int16 userId = reader.GetInt16(0);
+                    con.Close();
+                    return userId;
+                }
+
             }
 
             con.Close();

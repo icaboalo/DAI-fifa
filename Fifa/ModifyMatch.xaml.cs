@@ -30,6 +30,7 @@ namespace Fifa
         }
 
         private void tbModificar_Click(object sender, RoutedEventArgs e) {
+            MessageBox.Show(dpDate.Text);
             if ((cbMatch.SelectedItem as Match).UpdateMatch(dpDate.Text, userId) > 0) {
                 MessageBox.Show("Se actualizó el partido!");
             } else {
