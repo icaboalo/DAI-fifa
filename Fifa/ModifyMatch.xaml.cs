@@ -20,14 +20,17 @@ namespace Fifa
     /// </summary>
     public partial class ModifyMatch : UserControl
     {
-        public ModifyMatch()
+
+        Int16 userId;
+        public ModifyMatch(Int16 userId)
         {
             InitializeComponent();
+            this.userId = userId;
             Connection.LoadMatches(cbMatch);
         }
 
         private void tbModificar_Click(object sender, RoutedEventArgs e) {
-            if ((cbMatch.SelectedItem as Match).UpdateMatch(dpDate.Text) > 0) {
+            if ((cbMatch.SelectedItem as Match).UpdateMatch(dpDate.Text, userId) > 0) {
                 MessageBox.Show("Se actualizó el partido!");
             } else {
                 MessageBox.Show("Ocurrió un error al guardar");

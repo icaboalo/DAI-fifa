@@ -29,22 +29,22 @@ namespace Fifa {
             return result.ToString();
         }
 
-        public bool Login() {
+        public Int16 Login() {
             SqlConnection con = Connection.addConnection();
 
-            SqlCommand cmd = new SqlCommand(String.Format("SELECT password FROM usuario WHERE username = '{0}'", 
+            SqlCommand cmd = new SqlCommand(String.Format("SELECT * FROM usuario WHERE username = '{0}'", 
                 this.username), con);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
             
             // if (reader.GetString(0) != hashPassword(this.password)) {
-            if (reader.GetString(0) != this.password) { 
+            if (reader.GetString(2) != this.password) { 
                 con.Close();
-                return false;
+                return reader.GetInt16(0);
             }
 
             con.Close();
-            return true;
+            return -1;
         }
     }
 }

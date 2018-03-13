@@ -20,9 +20,12 @@ namespace Fifa
     /// </summary>
     public partial class AddGoal : UserControl
     {
-        public AddGoal()
+
+        Int16 userId;
+        public AddGoal(Int16 userId)
         {
             InitializeComponent();
+            this.userId = userId;
             cbPlayer.Items.Add("Selecciona una opción");
             cbPlayer.IsEnabled = false;
             cbPlayer.SelectedIndex = 0;
@@ -36,7 +39,6 @@ namespace Fifa
         }
 
         private void cbPlayer_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-
         }
 
         private void cbMatch_SelectionChanged(object sender, SelectionChangedEventArgs e) {
@@ -77,7 +79,7 @@ namespace Fifa
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if ((cbMatch.SelectedItem as Match).SaveGoal(int.Parse(tbMinute.Text), (cbPlayer.SelectedItem as Player).num) > 0)
+            if ((cbMatch.SelectedItem as Match).SaveGoal(int.Parse(tbMinute.Text), (cbPlayer.SelectedItem as Player).num, userId) > 0)
             {
                 MessageBox.Show("Gol registrado!");
             }

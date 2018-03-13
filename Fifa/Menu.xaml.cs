@@ -17,8 +17,11 @@ namespace Fifa {
     /// Lógica de interacción para Menu.xaml
     /// </summary>
     public partial class Menu : Window {
-        public Menu() {
+
+        Int16 userId;
+        public Menu(Int16 userId) {
             InitializeComponent();
+            this.userId = userId;
         }
 
         private void ButtonAddMatch_Click(object sender, RoutedEventArgs e) {
@@ -31,15 +34,15 @@ namespace Fifa {
         }
 
         private void ButtonModifyMatch_Click(object sender, RoutedEventArgs e) {
-            SwapFragment(new ModifyMatch());
+            SwapFragment(new ModifyMatch(userId));
         }
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e) {
-            SwapFragment(new Search());
+            SwapFragment(new Search(userId));
         }
 
         private void ButtonAddGoal_Click(object sender, RoutedEventArgs e) {
-            SwapFragment(new AddGoal());
+            SwapFragment(new AddGoal(userId));
         }
 
         private void ButtonDeleteMatch_Click(object sender, RoutedEventArgs e) {

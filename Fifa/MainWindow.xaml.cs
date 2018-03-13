@@ -24,11 +24,11 @@ namespace Fifa {
 
         private void Button_Click(object sender, RoutedEventArgs e) {
             User user = new User(tbUsername.Text, tbPassword.Text);
-
-            if (!user.Login()) {
+            Int16 userId = user.Login();
+            if (userId < 0) {
                 MessageBox.Show("Credenciales incorrectas");
             } else {
-                new Menu().Show();
+                new Menu(userId).Show();
                 this.Close();               
             }
         }

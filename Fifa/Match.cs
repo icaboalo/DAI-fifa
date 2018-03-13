@@ -42,34 +42,34 @@ namespace Fifa
             return this.teams;
         }
 
-        public int SaveMatch() {
+        public int SaveMatch(Int16 userId) {
             int res;
             SqlConnection con = Connection.addConnection();
 
-            SqlCommand cmd = new SqlCommand(String.Format("INSERT INTO partido VALUES('{0}', {1}, {2})", 
-                this.date, this.local.id, this.visit.id), con);
+            SqlCommand cmd = new SqlCommand(String.Format("INSERT INTO partido VALUES('{0}', {1}, {2}, {3}, {4})", 
+                this.date, this.local.id, this.visit.id, userId, userId), con);
 
             res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
         }
 
-        public int SaveGoal(int minute, Int16 playerId) {
+        public int SaveGoal(int minute, Int16 playerId, Int16 userId) {
             int res;
             SqlConnection con = Connection.addConnection();
 
-            SqlCommand cmd = new SqlCommand(String.Format("INSERT INTO gol VALUES({0}, {1}, {2})", minute, playerId, this.id), con);
+            SqlCommand cmd = new SqlCommand(String.Format("INSERT INTO gol VALUES({0}, {1}, {2}, {3})", minute, playerId, this.id, userId), con);
 
             res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
         }
 
-        public int UpdateMatch(String date) {
+        public int UpdateMatch(String date, Int16 userId) {
             int res;
             SqlConnection con = Connection.addConnection();
 
-            SqlCommand cmd = new SqlCommand(String.Format("UPDATE partido SET fecha = '{0}' WHERE id = {1}", date, this.id), con);
+            SqlCommand cmd = new SqlCommand(String.Format("UPDATE partido SET fecha = '{0}', actualizadoPor = {1} WHERE id = {2}", date, userId, this.id), con);
 
             res = cmd.ExecuteNonQuery();
             con.Close();
@@ -100,6 +100,25 @@ namespace Fifa
             }
 
             return list;
+        }
+
+        private String getScoreboard(Int16 matchId, Int16 localId, Int16 visitId) {
+            int visitScore = 0, localScore = 0;
+            SqlConnection con = Connection.addConnection();
+            SqlCommand localCmd = new SqlCommand(String.Format("SELECT COUNT(*) FROM gol INNER JOIN jugador on idJugador = jugador.numero INNER JOIN equipo ON equipo.id = jugador.idEquipo WHERE gol.idPartido = {0} AND equipo.id = {1}", matchId, localId), con);
+            SqlCommand visitCmd = new SqlCommand(String.Format("SELECT COUNT(*) FROM gol INNER JOIN jugador on idJugador = jugador.numero INNER JOIN equipo ON equipo.id = jugador.idEquipo WHERE gol.idPartido = {0} AND equipo.id = {1}", matchId, visitId), con);
+
+            SqlDataReader localReader = localCmd.ExecuteReader();
+            SqlDataReader visitReader = visitCmd.ExecuteReader();
+
+            while(localReader.Read()) {
+                localScore = localReader.GetInt16(0);
+            }
+            while(visitReader.Read()) {
+                visitScore = visitReader.GetInt16(0);
+            }
+
+            return localScore + " - " + visitScore;
         }
 
         public override string ToString() {

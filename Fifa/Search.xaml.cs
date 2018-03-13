@@ -20,7 +20,7 @@ namespace Fifa
     /// </summary>
     public partial class Search : UserControl
     {
-        public Search()
+        public Search(Int16 userId)
         {
             InitializeComponent();
             cbSelection.Items.Add("Partido");
