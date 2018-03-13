@@ -35,9 +35,8 @@ namespace Fifa
             SqlDataReader reader = cmd.ExecuteReader();
 
             while(reader.Read()) {
-                Player player = new Player(reader.GetInt16(0), reader.GetInt16(1), reader.GetString(2), reader.GetString(3), reader.GetInt16(4)) {
-                    goalCount = getGoalCount()
-                };
+                Player player = new Player(reader.GetInt16(0), reader.GetInt16(1), reader.GetString(2), reader.GetString(3), reader.GetInt16(4));
+                player.goalCount = player.getGoalCount();
                 list.Add(player);
             }
             con.Close();
