@@ -32,7 +32,7 @@ namespace Fifa
             SqlCommand cmd = new SqlCommand(String.Format("SELECT jugador.* FROM jugador INNER JOIN equipo ON jugador.idEquipo = equipo.id WHERE equipo.nombre = '{0}';", this.name), con);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read()) {
-                players.Add(new Player(reader.GetInt16(0), reader.GetString(1), reader.GetString(2), reader.GetInt16(3)));
+                players.Add(new Player(reader.GetInt16(0), reader.GetInt16(1), reader.GetString(2), reader.GetString(3), reader.GetInt16(4)));
             }
 
             con.Close();

@@ -79,7 +79,7 @@ namespace Fifa
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if ((cbMatch.SelectedItem as Match).SaveGoal(int.Parse(tbMinute.Text), (cbPlayer.SelectedItem as Player).num, userId) > 0)
+            if ((cbMatch.SelectedItem as Match).SaveGoal(int.Parse(tbMinute.Text), (cbPlayer.SelectedItem as Player).id, userId) > 0)
             {
                 MessageBox.Show("Gol registrado!");
             }
