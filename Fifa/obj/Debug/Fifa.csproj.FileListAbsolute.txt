@@ -49,3 +49,5 @@ C:\Users\ICABOA\Documents\Visual Studio 2015\Projects\DAI-fifa\Fifa\obj\Debug\De
 C:\Users\ICABOA\Documents\Visual Studio 2015\Projects\DAI-fifa\Fifa\obj\Debug\Fifa.g.resources
 C:\Users\ICABOA\Documents\Visual Studio 2015\Projects\DAI-fifa\Fifa\obj\Debug\Fifa.Properties.Resources.resources
 C:\Users\ICABOA\Documents\Visual Studio 2015\Projects\DAI-fifa\Fifa\obj\Debug\Fifa.csproj.GenerateResource.Cache
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\DeleteMatch.g.cs
+C:\Users\icabo\Documents\Visual Studio Code 2017\DAI-fifa\Fifa\obj\Debug\DeleteMatch.baml

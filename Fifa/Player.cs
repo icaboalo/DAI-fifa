@@ -13,6 +13,7 @@ namespace Fifa
         public String name { get; set; }
         public String position { get; set; }
         public Int16 teamId { get; set; }
+        public int goalCount { get; set; }
 
         public Player(Int16 num, String name, String position, Int16 teamId) {
             this.num = num;
@@ -33,10 +34,28 @@ namespace Fifa
             SqlDataReader reader = cmd.ExecuteReader();
 
             while(reader.Read()) {
-                list.Add(new Player(reader.GetInt16(0), reader.GetString(1), reader.GetString(2), reader.GetInt16(3)));
+                Player player = new Player(reader.GetInt16(0), reader.GetString(1), reader.GetString(2), reader.GetInt16(3)) {
+                    goalCount = getGoalCount()
+                };
+                list.Add(player);
             }
             con.Close();
             return list;
+        }
+
+        public int getGoalCount() {
+            int count = 0;
+            SqlConnection con = Connection.addConnection();
+
+            SqlCommand cmd = new SqlCommand(String.Format("SELECT COUNT(*) FROM gol WHERE idJugador = {0}", this.num), con);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while(reader.Read()) {
+                count = reader.GetInt16(0);
+            }
+
+            return count;
         }
 
         public override string ToString() {
