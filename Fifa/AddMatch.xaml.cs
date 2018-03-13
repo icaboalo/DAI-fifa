@@ -20,15 +20,17 @@ namespace Fifa
     /// </summary>
     public partial class AddMatch : UserControl
     {
-        public AddMatch()
+        Int16 userId;
+        public AddMatch(Int16 userId)
         {
             InitializeComponent();
+            this.userId = userId;
             Connection.LoadTeams(cbLocal);
             Connection.LoadTeams(cbVisit);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-            if (new Match((cbLocal.SelectedItem as Team), (cbVisit.SelectedItem as Team), dpDate.Text).SaveMatch() > 0) {
+            if (new Match((cbLocal.SelectedItem as Team), (cbVisit.SelectedItem as Team), dpDate.Text).SaveMatch(userId) > 0) {
                 MessageBox.Show("Partido guardado!");
             } else {
                 MessageBox.Show("Ocurrió un error al guardar");

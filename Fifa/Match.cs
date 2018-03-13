@@ -13,6 +13,7 @@ namespace Fifa
         private Team local { get; set; }
         private Team visit { get; set; }
         public String date { get; set; }
+        public String scoreBoard { get; set; }
         List<Team> teams;
 
         public Match(Int16 id, Team local, Team visit, String date): this(local, visit, date) {
@@ -96,17 +97,20 @@ namespace Fifa
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read()) {
-                list.Add(new Match(reader.GetInt16(0), new Team(reader.GetInt16(2)), new Team(reader.GetInt16(3)), reader.GetDateTime(1).ToString().Substring(0, 10)));
+                Match match = new Match(reader.GetInt16(0), new Team(reader.GetInt16(2)), new Team(reader.GetInt16(3)), reader.GetDateTime(1).ToString().Substring(0, 10)) {
+                    scoreBoard = getScoreboard()
+                };
+                list.Add(match);
             }
 
             return list;
         }
 
-        private String getScoreboard(Int16 matchId, Int16 localId, Int16 visitId) {
+        private String getScoreboard() {
             int visitScore = 0, localScore = 0;
             SqlConnection con = Connection.addConnection();
-            SqlCommand localCmd = new SqlCommand(String.Format("SELECT COUNT(*) FROM gol INNER JOIN jugador on idJugador = jugador.numero INNER JOIN equipo ON equipo.id = jugador.idEquipo WHERE gol.idPartido = {0} AND equipo.id = {1}", matchId, localId), con);
-            SqlCommand visitCmd = new SqlCommand(String.Format("SELECT COUNT(*) FROM gol INNER JOIN jugador on idJugador = jugador.numero INNER JOIN equipo ON equipo.id = jugador.idEquipo WHERE gol.idPartido = {0} AND equipo.id = {1}", matchId, visitId), con);
+            SqlCommand localCmd = new SqlCommand(String.Format("SELECT COUNT(*) FROM gol INNER JOIN jugador on idJugador = jugador.numero INNER JOIN equipo ON equipo.id = jugador.idEquipo WHERE gol.idPartido = {0} AND equipo.id = {1}", this.id, this.local.id), con);
+            SqlCommand visitCmd = new SqlCommand(String.Format("SELECT COUNT(*) FROM gol INNER JOIN jugador on idJugador = jugador.numero INNER JOIN equipo ON equipo.id = jugador.idEquipo WHERE gol.idPartido = {0} AND equipo.id = {1}", this.id, this.visit.id), con);
 
             SqlDataReader localReader = localCmd.ExecuteReader();
             SqlDataReader visitReader = visitCmd.ExecuteReader();

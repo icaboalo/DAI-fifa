@@ -25,7 +25,7 @@ namespace Fifa {
         }
 
         private void ButtonAddMatch_Click(object sender, RoutedEventArgs e) {
-            SwapFragment(new AddMatch());
+            SwapFragment(new AddMatch(userId));
         }
 
         private void SwapFragment(UIElement screen) {
