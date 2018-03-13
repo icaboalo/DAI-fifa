@@ -97,9 +97,8 @@ namespace Fifa
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read()) {
-                Match match = new Match(reader.GetInt16(0), new Team(reader.GetInt16(2)), new Team(reader.GetInt16(3)), reader.GetDateTime(1).ToString().Substring(0, 10)) {
-                    scoreBoard = getScoreboard()
-                };
+                Match match = new Match(reader.GetInt16(0), new Team(reader.GetInt16(2)), new Team(reader.GetInt16(3)), reader.GetDateTime(1).ToString().Substring(0, 10));
+                match.scoreBoard = match.getScoreboard();
                 list.Add(match);
             }
 
