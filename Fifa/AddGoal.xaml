@@ -10,39 +10,39 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <ComboBox x:Name="cbTeam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,164,0,0" SelectionChanged="cbTeam_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS">
+        <ComboBox x:Name="cbTeam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,164,0,0" SelectionChanged="cbTeam_SelectionChanged" Foreground="#FF7C0219" FontFamily="Arial">
             <ComboBox.Background>
                 <ImageBrush/>
             </ComboBox.Background>
         </ComboBox>
 
-        <Label Content="Minuto del gol:" HorizontalAlignment="Left" Margin="243,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Content="Minuto del gol:" HorizontalAlignment="Left" Margin="243,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <ComboBox x:Name="cbPlayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="243,164,0,0" SelectionChanged="cbPlayer_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS">
+        <ComboBox x:Name="cbPlayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="243,164,0,0" SelectionChanged="cbPlayer_SelectionChanged" Foreground="#FF7C0219" FontFamily="Arial">
             <ComboBox.Background>
                 <ImageBrush/>
             </ComboBox.Background>
         </ComboBox>
 
-        <Label Content="Nombre de equipo:" HorizontalAlignment="Left" Margin="15,133,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Content="Nombre de equipo:" HorizontalAlignment="Left" Margin="15,133,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <Label Content="Nombre de jugador:" HorizontalAlignment="Left" Margin="243,133,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Content="Nombre de jugador:" HorizontalAlignment="Left" Margin="243,133,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <TextBox x:Name="tbMinute" HorizontalAlignment="Left" Height="22" Margin="243,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="tbMinute" HorizontalAlignment="Left" Height="22" Margin="243,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <Label Content="AÑADIR GOL" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" FontSize="18" Background="White" Foreground="#FF7C0219" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="AÑADIR GOL" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" FontSize="18" Background="White" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold"/>
 
-        <ComboBox x:Name="cbMatch" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,79,0,0" SelectionChanged="cbMatch_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS">
+        <ComboBox x:Name="cbMatch" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,79,0,0" SelectionChanged="cbMatch_SelectionChanged" Foreground="#FF7C0219" FontFamily="Arial">
             <ComboBox.Background>
                 <ImageBrush/>
             </ComboBox.Background>
         </ComboBox>
 
-        <Label Content="Partido jugado:" HorizontalAlignment="Left" Margin="15,48,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Content="Partido jugado:" HorizontalAlignment="Left" Margin="15,48,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
 
 
 
-        <Button Width="100" Height="25" Content="Guardar" Margin="129,224,216.333,79.667" Click="Button_Click" Foreground="#FF7C0219" BorderBrush="#FF7C0219" RenderTransformOrigin="0.5,0.5" FontFamily="Comic Sans MS" FontWeight="Bold">
+        <Button Width="100" Height="25" Content="Guardar" Margin="129,224,216.333,79.667" Click="Button_Click" Foreground="#FF7C0219" BorderBrush="#FF7C0219" RenderTransformOrigin="0.5,0.5" FontFamily="Arial" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

@@ -6,21 +6,21 @@
              xmlns:local="clr-namespace:Fifa"
              mc:Ignorable="d" Height="278.483" Width="377.664">
     <Grid>
-        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="125,94,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05"  Height="24" Width="144" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="125,94,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05"  Height="24" Width="144" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="18,168,0,0" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="18,168,0,0" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <Label Content="Fecha de partido:" HorizontalAlignment="Left" Margin="148,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Content="Fecha de partido:" HorizontalAlignment="Left" Margin="148,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <ComboBox x:Name="cbVisit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="246,168,0,0" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="cbVisit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="246,168,0,0" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <Label Content="Equipo 1:" HorizontalAlignment="Left" Margin="18,137,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Content="Equipo 1:" HorizontalAlignment="Left" Margin="18,137,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <Label Content="Equipo 2:" HorizontalAlignment="Left" Margin="246,137,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Content="Equipo 2:" HorizontalAlignment="Left" Margin="246,137,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <Label Content="AÑADIR PARTIDO" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,10,0,0" FontWeight="Bold" FontSize="18" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Content="AÑADIR PARTIDO" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,10,0,0" FontWeight="Bold" FontSize="18" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <Button Width="100" Height="25" Content="Guardar" Margin="140,208,138,45" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" FontWeight="Bold" BorderBrush="#FF7C0219">
+        <Button Width="100" Height="25" Content="Guardar" Margin="140,208,138,45" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold" BorderBrush="#FF7C0219">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

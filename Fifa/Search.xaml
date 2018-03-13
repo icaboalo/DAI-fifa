@@ -19,21 +19,21 @@
 
         </Grid.ColumnDefinitions>
 
-        <Label Name="lbName" Content="nombre" HorizontalAlignment="Left" Margin="49,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,2.5" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Name="lbName" Content="nombre" HorizontalAlignment="Left" Margin="49,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,2.5" Foreground="#FF7C0219" FontFamily="Arial"/>
 
-        <Button Content="buscar" HorizontalAlignment="Left" Margin="134,289,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.ColumnSpan="2" />
+        <Button Content="buscar" HorizontalAlignment="Left" Margin="134,289,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2" />
 
-        <DataGrid Name="dgResult" HorizontalAlignment="Left" Margin="178,77,0,0" VerticalAlignment="Top" Height="300" Width="400" Grid.ColumnSpan="3" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.Column="1"/>
+        <DataGrid Name="dgResult" HorizontalAlignment="Left" Margin="178,77,0,0" VerticalAlignment="Top" Height="300" Width="400" Grid.ColumnSpan="3" Foreground="#FF7C0219" FontFamily="Arial" Grid.Column="1"/>
 
-        <ComboBox Name="cbSelection" HorizontalAlignment="Left" Margin="126,197,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.ColumnSpan="2"/>
+        <ComboBox Name="cbSelection" HorizontalAlignment="Left" Margin="126,197,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2"/>
 
-        <Label Name="lbDate" Content="fecha" HorizontalAlignment="Left" Margin="62,246,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Comic Sans MS"/>
+        <Label Name="lbDate" Content="fecha" HorizontalAlignment="Left" Margin="62,246,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
 
         <DatePicker Name="dpDate" HorizontalAlignment="Left" Margin="134,246,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05" Grid.ColumnSpan="2"/>
 
-        <Label Content="BUSQUEDA" HorizontalAlignment="Left" Margin="134,150,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.ColumnSpan="2"/>
+        <Label Content="BUSQUEDA" HorizontalAlignment="Left" Margin="134,150,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2"/>
 
-        <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" Margin="134,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Grid.ColumnSpan="2"/>
+        <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" Margin="134,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2"/>
 
 
     </Grid>

@@ -68,6 +68,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>fifaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="fifaDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fifaDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fifaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fifaDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Match.cs" />
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
@@ -147,6 +157,28 @@
     </None>
     <None Include="fifaDataSet1.xss">
       <DependentUpon>fifaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="fifaDataSet11.xsc">
+      <DependentUpon>fifaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="fifaDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fifaDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fifaDataSet11.xss">
+      <DependentUpon>fifaDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="fifaDataSet2.xsc">
+      <DependentUpon>fifaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="fifaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fifaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fifaDataSet2.xss">
+      <DependentUpon>fifaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

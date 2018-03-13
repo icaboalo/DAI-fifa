@@ -17,31 +17,31 @@
 
         </Grid.ColumnDefinitions>
 
-        <Button Name="btAddMatch" Grid.Column="0" Content="Añadir partido" HorizontalAlignment="Center" Margin="47,97,23,0" VerticalAlignment="Top" Width="90" Click="ButtonAddMatch_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" BorderBrush="#FF7C0219" FontWeight="Bold">
+        <Button Name="btAddMatch" Grid.Column="0" Content="Añadir partido" HorizontalAlignment="Center" Margin="47,97,23,0" VerticalAlignment="Top" Width="90" Click="ButtonAddMatch_Click" Foreground="#FF7C0219" FontFamily="Arial" BorderBrush="#FF7C0219" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
 
-        <Button Name="btSearch" Grid.Column="0" Content="Buscar" HorizontalAlignment="Center" Margin="45,147,25,0" VerticalAlignment="Top" Width="90" Click="ButtonSearch_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" BorderBrush="#FF7C0219" FontWeight="Bold">
+        <Button Name="btSearch" Grid.Column="0" Content="Buscar" HorizontalAlignment="Center" Margin="45,147,25,0" VerticalAlignment="Top" Width="90" Click="ButtonSearch_Click" Foreground="#FF7C0219" FontFamily="Arial" BorderBrush="#FF7C0219" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
 
-        <Button Name="btModifyPlayer" Grid.Column="0" Content="Modificar partido" HorizontalAlignment="Center" Margin="46,122,24,0" VerticalAlignment="Top" Width="90" Click="ButtonModifyMatch_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" BorderBrush="#FF7C0219" FontWeight="Bold">
+        <Button Name="btModifyPlayer" Grid.Column="0" Content="Modificar partido" HorizontalAlignment="Center" Margin="46,122,24,0" VerticalAlignment="Top" Width="90" Click="ButtonModifyMatch_Click" Foreground="#FF7C0219" FontFamily="Arial" BorderBrush="#FF7C0219" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
 
-        <Button Name="btAddGoal" Grid.Column="0" Content="Añadir Gol" HorizontalAlignment="Center" Margin="46,172,24,0" VerticalAlignment="Top" Width="90" Click="ButtonAddGoal_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" BorderBrush="#FF7C0219" FontWeight="Bold">
+        <Button Name="btAddGoal" Grid.Column="0" Content="Añadir Gol" HorizontalAlignment="Center" Margin="46,172,24,0" VerticalAlignment="Top" Width="90" Click="ButtonAddGoal_Click" Foreground="#FF7C0219" FontFamily="Arial" BorderBrush="#FF7C0219" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
 
-        <Button Name="btDeleteMatch" Grid.Column="0" Content="Eliminar Partido" HorizontalAlignment="Center" Margin="46,197,24,0" VerticalAlignment="Top" Width="90" Click="ButtonDeleteMatch_Click" Foreground="#FF7C0219" FontFamily="Comic Sans MS" BorderBrush="#FF7C0219" FontWeight="Bold">
+        <Button Name="btDeleteMatch" Grid.Column="0" Content="Eliminar Partido" HorizontalAlignment="Center" Margin="46,197,24,0" VerticalAlignment="Top" Width="90" Click="ButtonDeleteMatch_Click" Foreground="#FF7C0219" FontFamily="Arial" BorderBrush="#FF7C0219" FontWeight="Bold">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>

@@ -43,5 +43,15 @@ namespace Fifa.Properties {
                 return ((string)(this["fifaConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-7Q4U3HD;Initial Catalog=fifa;Integrated Security=True")]
+        public string fifaConnectionString2 {
+            get {
+                return ((string)(this["fifaConnectionString2"]));
+            }
+        }
     }
 }
