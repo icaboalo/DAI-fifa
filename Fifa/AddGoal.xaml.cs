@@ -82,6 +82,8 @@ namespace Fifa
             if ((cbMatch.SelectedItem as Match).SaveGoal(int.Parse(tbMinute.Text), (cbPlayer.SelectedItem as Player).id, userId) > 0)
             {
                 MessageBox.Show("Gol registrado!");
+                tbMinute.Text = "";
+                cbPlayer.SelectedIndex = cbMatch.SelectedIndex = cbTeam.SelectedIndex = 0;
             }
             else
             {

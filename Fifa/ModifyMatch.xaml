@@ -5,30 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Fifa"
              mc:Ignorable="d" Height="206.557" Width="353.689">
-    <Grid>
-        <Grid.ColumnDefinitions>
+    <Grid Background="#FFDFDFDF" Margin="0,0,-68.667,-0.333">
 
-            <ColumnDefinition Width="42*"/>
 
-            <ColumnDefinition Width="257*"/>
-
-        </Grid.ColumnDefinitions>
-
-        <Label Content="fecha" HorizontalAlignment="Left" Margin="38,98,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="38" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="66.4,98,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05" Grid.Column="1" Height="24" Width="144" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Button x:Name="tbModificar" Content="Modificar" HorizontalAlignment="Left" Margin="66.4,152,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Height="19" Click="tbModificar_Click" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold" >
+        <Button x:Name="tbModificar" Content="" HorizontalAlignment="Left" Margin="131,161,0,0" VerticalAlignment="Top" Width="46" Height="25" Click="tbModificar_Click" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold" BorderBrush="{x:Null}" >
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="modificar.png"/>
             </Button.Background>
         </Button>
-
-        <ComboBox x:Name="cbMatch" HorizontalAlignment="Left" Height="23" Margin="66.4,67,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Label Content="Partido:" HorizontalAlignment="Left" Margin="38,67,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="58" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Label Content="MODIFICAR" Grid.Column="1" HorizontalAlignment="Left" Margin="66.4,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF7C0219" FontFamily="Arial"/>
+        <Label Content="Modificar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,10,0,0" FontSize="22" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Fecha:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,94,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label Content="Partido:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,64,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="128,98,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05"  Height="24" Width="144" Foreground="#FF090909" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <ComboBox x:Name="cbMatch" HorizontalAlignment="Left" VerticalAlignment="Top" Width="144" Margin="128,71,0,0" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Background="#FFDFDFDF" FontWeight="Bold"/>
 
     </Grid>
+
 </UserControl>

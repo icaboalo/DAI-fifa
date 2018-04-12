@@ -5,27 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fifa"
         mc:Ignorable="d"
-        Title="MainWindow" Height="368.356" Width="334.275">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            
-        </Grid.ColumnDefinitions>
-
-        <Button Content="Login" HorizontalAlignment="Left" Margin="117,284,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold" BorderBrush="#FF7C0219">
+        Title="MainWindow" Height="415.841" Width="334.275" SizeToContent="WidthAndHeight">
+    <Grid Background="#FF77BDE3" Margin="0,0,-7,2">
+        <Image HorizontalAlignment="Left" Height="209" VerticalAlignment="Top" Width="270" Source="russia2018.png" Margin="57,0,0,0"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,234,0,0" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="18" Foreground="#FFFEFBFB"/>
+        <TextBox Name="tbUsername" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="156,245,0,0" Background="#FFE9E9E9" FontFamily="Comic Sans MS" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,277,0,0" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="18" Foreground="#FFFEFBFB"/>
+        <TextBox Name="tbPassword" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="156,289,0,0" Background="#FFE9E9E9" FontFamily="Comic Sans MS" FontSize="18" FontWeight="Bold"/>
+        <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="120,335,0,0" Height="41" BorderBrush="{x:Null}" Click="Button_Click_1">
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="loginbutton.png"/>
             </Button.Background>
         </Button>
-
-        <Label Content="Usuario :" HorizontalAlignment="Left" Margin="25,160,0,0" VerticalAlignment="Top" Background="White" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold"/>
-
-        <Label Content="Contraseña :" HorizontalAlignment="Left" Margin="25,213,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold"/>
-
-        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" Height="23" Margin="101,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" Height="23" Margin="106,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Arial"/>
-        <Image Margin="25,33,37,216" Source="imagen_1.jpg" Stretch="Fill"/>
-
+        <Button Content="Button" HorizontalAlignment="Left" Margin="446,91,-187,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
+
 </Window>

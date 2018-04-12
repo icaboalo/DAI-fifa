@@ -13,7 +13,7 @@ namespace Fifa {
 		public static SqlConnection addConnection() {
             SqlConnection connection;
 			try {
-                connection = new SqlConnection("Data Source=DESKTOP-7Q4U3HD;Initial Catalog=fifa;Integrated Security=True");
+                connection = new SqlConnection("Data Source=localhost;Initial Catalog=fifa;Integrated Security=True");
                 connection.Open();
             } catch (Exception e)
             {
@@ -29,7 +29,7 @@ namespace Fifa {
             SqlCommand cmd = new SqlCommand("SELECT * FROM partido;", con);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read()) {
-                comboBox.Items.Add(new Match(reader.GetInt16(0), new Team(reader.GetInt16(2)), new Team(reader.GetInt16(3)), reader.GetDateTime(1).ToString().Substring(0, 10)));
+                comboBox.Items.Add(new Match(reader.GetInt16(0), new Team(reader.GetInt16(2)), new Team(reader.GetInt16(3)), reader.GetDateTime(1).ToString().Substring(0, 10), new Stadium(reader.GetInt16(4))));
             }
             con.Close();
         }
@@ -40,6 +40,18 @@ namespace Fifa {
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read()) {
                 comboBox.Items.Add(new Team(reader.GetInt16(0), reader.GetString(1)));
+            }
+            con.Close();
+        }
+
+        public static void LoadStadiums(ComboBox comboBox)
+        {
+            SqlConnection con = addConnection();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM estadio;", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox.Items.Add(new Stadium(reader.GetInt16(0), reader.GetString(1), reader.GetDouble(2), reader.GetDouble(3), reader.GetString(4)));
             }
             con.Close();
         }

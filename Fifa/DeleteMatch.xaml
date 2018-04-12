@@ -5,21 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Fifa"
              mc:Ignorable="d" Height="171.951" Width="352.439">
-    <Grid>
-        <ComboBox Name="cbMatch" HorizontalAlignment="Left" Margin="183,59,0,0" VerticalAlignment="Top" Width="120" Foreground="#FF7C0219" FontFamily="Arial">
-            <ComboBox.Background>
-                <ImageBrush/>
-            </ComboBox.Background>
-        </ComboBox>
+    <Grid Background="#FFDFDFDF">
+        <ComboBox Name="cbMatch" HorizontalAlignment="Left" Margin="183,59,0,0" VerticalAlignment="Top" Width="120" Foreground="#FF7C0219" FontFamily="Arial" Background="#FFDFDFDF"/>
 
-        <Button Name="botonBorrar" Content="Borrar" HorizontalAlignment="Left" Margin="147,104,0,0" VerticalAlignment="Top" Width="75" Click="ButtonDeleteMatch_Click" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold">
+        <Button Name="botonBorrar" Content="" HorizontalAlignment="Left" Margin="147,104,0,0" VerticalAlignment="Top" Width="65" Click="ButtonDeleteMatch_Click" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold" BorderBrush="{x:Null}" Height="27">
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="eliminar.png"/>
             </Button.Background>
         </Button>
-
-        <Label Content="Seleccionar partido&#xD;&#xA;" HorizontalAlignment="Left" Margin="55,55,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Label Content="BORRAR PARTIDO" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,10,0,0" FontWeight="Bold" FontSize="20" Foreground="#FF7C0219" FontFamily="Arial"/>
+        <Label Content="Borrar Partido" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,10,0,0" FontSize="22" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Seleccionar Partido" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,51,0,0" FontSize="15" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
     </Grid>
+
 </UserControl>

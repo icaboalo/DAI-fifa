@@ -5,36 +5,22 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Fifa"
              mc:Ignorable="d" d:DesignWidth="800" Height="432.689">
-    <Grid Margin="0,0,10,10">
-
-        <Grid.ColumnDefinitions>
-
-            <ColumnDefinition Width="127*"/>
-
-            <ColumnDefinition Width="363*"/>
-            <ColumnDefinition Width="140*"/>
-            <ColumnDefinition Width="46*"/>
-
-            <ColumnDefinition Width="62*"/>
-
-        </Grid.ColumnDefinitions>
-
-        <Label Name="lbName" Content="nombre" HorizontalAlignment="Left" Margin="49,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,2.5" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Button Content="buscar" HorizontalAlignment="Left" Margin="134,289,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2" />
-
-        <DataGrid Name="dgResult" HorizontalAlignment="Left" Margin="178,77,0,0" VerticalAlignment="Top" Height="300" Width="400" Grid.ColumnSpan="3" Foreground="#FF7C0219" FontFamily="Arial" Grid.Column="1"/>
-
-        <ComboBox Name="cbSelection" HorizontalAlignment="Left" Margin="126,197,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2"/>
-
-        <Label Name="lbDate" Content="fecha" HorizontalAlignment="Left" Margin="62,246,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <DatePicker Name="dpDate" HorizontalAlignment="Left" Margin="134,246,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05" Grid.ColumnSpan="2"/>
-
-        <Label Content="BUSQUEDA" HorizontalAlignment="Left" Margin="134,150,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2"/>
-
-        <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" Margin="134,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2"/>
+    <Grid Margin="0,0,10,10" Background="#FFDFDFDF">
 
 
+
+        <Button Content="" HorizontalAlignment="Left" Margin="134,289,0,0" VerticalAlignment="Top" Width="55" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Arial" Grid.ColumnSpan="2" BorderBrush="{x:Null}" Height="48" >
+            <Button.Background>
+                <ImageBrush ImageSource="buscar.png"/>
+            </Button.Background>
+        </Button>
+
+        <DataGrid Name="dgResult" HorizontalAlignment="Left" Margin="351,80,0,0" VerticalAlignment="Top" Height="300" Width="400" Foreground="#FF7C0219" FontFamily="Arial" Background="#FFDFDFDF"/>
+        <Label Content="Busqueda" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,121,0,0" FontSize="22" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label Name="lbName" Content="Nombre" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,197,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Name="lbDate" Content="Fecha" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,246,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="126,246,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05"  Height="24" Width="144" Foreground="#FF090909" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cbSelection" HorizontalAlignment="Left" Margin="81,167,0,0" VerticalAlignment="Top" Width="144" Foreground="#FF7C0219" FontFamily="Arial" Background="#FFDFDFDF"/>
+        <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="126,204,0,0" Background="#FFEDEAEA" FontFamily="Comic Sans MS" FontWeight="Bold"/>
     </Grid>
 </UserControl>

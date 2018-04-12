@@ -23,7 +23,7 @@ namespace Fifa {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) {
+        private void Button_Click_1(object sender, RoutedEventArgs e) {
             /*
             User user = new User(tbUsername.Text, tbPassword.Text);
             Int16 userId = user.Login();

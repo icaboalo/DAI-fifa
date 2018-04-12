@@ -6,46 +6,21 @@
              xmlns:local="clr-namespace:Fifa"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="400">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush/>
-        </Grid.Background>
-        <ComboBox x:Name="cbTeam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,164,0,0" SelectionChanged="cbTeam_SelectionChanged" Foreground="#FF7C0219" FontFamily="Arial">
-            <ComboBox.Background>
-                <ImageBrush/>
-            </ComboBox.Background>
-        </ComboBox>
 
-        <Label Content="Minuto del gol:" HorizontalAlignment="Left" Margin="243,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448" Foreground="#FF7C0219" FontFamily="Arial"/>
+    <Grid Background="#FFDFDFDF" Margin="0,0,0,-64">
+        <ComboBox x:Name="cbTeam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,214,0,0" SelectionChanged="cbTeam_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Background="#FFDFDFDF" FontWeight="Bold"/>
 
-        <ComboBox x:Name="cbPlayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="243,164,0,0" SelectionChanged="cbPlayer_SelectionChanged" Foreground="#FF7C0219" FontFamily="Arial">
-            <ComboBox.Background>
-                <ImageBrush/>
-            </ComboBox.Background>
-        </ComboBox>
+        <ComboBox x:Name="cbPlayer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="243,214,0,0" SelectionChanged="cbPlayer_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Background="#FFDFDFDF" FontWeight="Bold"/>
 
-        <Label Content="Nombre de equipo:" HorizontalAlignment="Left" Margin="15,133,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
+        <TextBox x:Name="tbMinute" HorizontalAlignment="Left" Height="22" Margin="243,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Background="#FFEEECEC" FontWeight="Bold"/>
 
-        <Label Content="Nombre de jugador:" HorizontalAlignment="Left" Margin="243,133,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
+        <Label Content="Añadir Gol" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" FontSize="22" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
 
-        <TextBox x:Name="tbMinute" HorizontalAlignment="Left" Height="22" Margin="243,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Label Content="AÑADIR GOL" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,10,0,0" FontSize="18" Background="White" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold"/>
-
-        <ComboBox x:Name="cbMatch" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,79,0,0" SelectionChanged="cbMatch_SelectionChanged" Foreground="#FF7C0219" FontFamily="Arial">
-            <ComboBox.Background>
-                <ImageBrush/>
-            </ComboBox.Background>
-        </ComboBox>
-
-        <Label Content="Partido jugado:" HorizontalAlignment="Left" Margin="15,48,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-
-
-        <Button Width="100" Height="25" Content="Guardar" Margin="129,224,216.333,79.667" Click="Button_Click" Foreground="#FF7C0219" BorderBrush="#FF7C0219" RenderTransformOrigin="0.5,0.5" FontFamily="Arial" FontWeight="Bold">
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
+        <ComboBox x:Name="cbMatch" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="15,129,0,0" SelectionChanged="cbMatch_SelectionChanged" Foreground="#FF7C0219" FontFamily="Comic Sans MS" Background="#FFDFDFDF" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="66" Source="gol.png" Margin="151,51,0,0"/>
+        <Label Content="Partido jugado:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,101,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Minuto del gol:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="243,95,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Nombre de equipo:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,183,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Nombre de jugador:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="229,183,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
     </Grid>
 </UserControl>

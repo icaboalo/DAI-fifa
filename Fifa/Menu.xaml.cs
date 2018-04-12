@@ -53,5 +53,10 @@ namespace Fifa {
         private void ButtonExit_Click(object sender, RoutedEventArgs e) {
             this.Close();
         }
+
+        private void ButtonAddStadium_Click(object sender, RoutedEventArgs e)
+        {
+            SwapFragment(new AddStadium());
+        }
     }
 }

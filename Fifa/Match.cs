@@ -13,18 +13,20 @@ namespace Fifa
         public Int16 id { get; set; }
         private Team local { get; set; }
         private Team visit { get; set; }
+        private Stadium stadium { get; set; }
         public String date { get; set; }
         public String scoreBoard { get; set; }
         List<Team> teams;
 
-        public Match(Int16 id, Team local, Team visit, String date): this(local, visit, date) {
+        public Match(Int16 id, Team local, Team visit, String date, Stadium stadium): this(local, visit, date, stadium) {
             this.id = id;
         }
 
-        public Match(Team local, Team visit, String date) {
+        public Match(Team local, Team visit, String date, Stadium stadium) {
             this.local = local;
             this.visit = visit;
             this.date = date;
+            this.stadium = stadium;
         }
 
         public Match(String date) {
@@ -48,8 +50,8 @@ namespace Fifa
             int res;
             SqlConnection con = Connection.addConnection();
 
-            SqlCommand cmd = new SqlCommand(String.Format("INSERT INTO partido VALUES(CONVERT(datetime, '{0}'), {1}, {2}, {3}, {4})",
-                this.date.Substring(6) + "-" + this.date.Substring(2, 4).Replace("/", "") + "-" + this.date.Substring(0, 2), this.local.id, this.visit.id, userId, userId), con);
+            SqlCommand cmd = new SqlCommand(String.Format("INSERT INTO partido VALUES(CONVERT(datetime, '{0}'), {1}, {2}, {5}, {3}, {4})",
+                this.date.Substring(6) + "-" + this.date.Substring(2, 4).Replace("/", "") + "-" + this.date.Substring(0, 2), this.local.id, this.visit.id, userId, userId, this.stadium.id), con);
 
             res = cmd.ExecuteNonQuery();
             con.Close();
@@ -97,7 +99,7 @@ namespace Fifa
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read()) {
-                Match match = new Match(reader.GetInt16(0), new Team(reader.GetInt16(2)), new Team(reader.GetInt16(3)), reader.GetDateTime(1).ToString());
+                Match match = new Match(reader.GetInt16(0), new Team(reader.GetInt16(2)), new Team(reader.GetInt16(3)), reader.GetDateTime(1).ToString(), new Stadium(reader.GetInt16(4)));
                 match.scoreBoard = match.getScoreboard();
                 list.Add(match);
             }

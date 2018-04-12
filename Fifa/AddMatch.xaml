@@ -5,25 +5,46 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Fifa"
              mc:Ignorable="d" Height="278.483" Width="377.664">
-    <Grid>
-        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="125,94,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05"  Height="24" Width="144" Foreground="#FF7C0219" FontFamily="Arial"/>
+    <Grid Background="#FFDFDFDF" Margin="0,0,-0.667,-131.333">
+        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="169,135,0,0" VerticalAlignment="Top" DisplayDate="2017-10-05"  Height="24" Width="144" Foreground="#FF090909" FontFamily="Comic Sans MS" FontWeight="Bold"/>
 
-        <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="18,168,0,0" Foreground="#FF7C0219" FontFamily="Arial"/>
+        <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="18,294,0,0" Foreground="#FF7C0219" FontFamily="Comic Sans MS" FontWeight="Bold">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFDFDFDF" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
 
-        <Label Content="Fecha de partido:" HorizontalAlignment="Left" Margin="148,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.261,0.448" Foreground="#FF7C0219" FontFamily="Arial"/>
+        <ComboBox x:Name="cbVisit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="246,294,0,0" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFDFDFDF" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
 
-        <ComboBox x:Name="cbVisit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="246,168,0,0" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Label Content="Equipo 1:" HorizontalAlignment="Left" Margin="18,137,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Label Content="Equipo 2:" HorizontalAlignment="Left" Margin="246,137,0,0" VerticalAlignment="Top" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Label Content="AÑADIR PARTIDO" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,10,0,0" FontWeight="Bold" FontSize="18" Foreground="#FF7C0219" FontFamily="Arial"/>
-
-        <Button Width="100" Height="25" Content="Guardar" Margin="140,208,138,45" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold" BorderBrush="#FF7C0219">
+        <Button Content="" Margin="154,361,142,10" Click="Button_Click" Foreground="#FF7C0219" FontFamily="Arial" FontWeight="Bold" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="botonGuardar.png"/>
             </Button.Background>
         </Button>
+        <Label Content="Añadir Partido" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,10,0,0" FontSize="22" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Fecha de partido:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Equipo 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="19,268,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Label Content="Equipo 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="246,268,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="94" Source="game.png" Margin="154,56,0,0"/>
+        <Label Content="Estadio:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,185,0,0" FontSize="14" Background="{x:Null}" Foreground="#FB000000" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+        <ComboBox x:Name="cbStadium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="144" Margin="169,192,0,0" Foreground="#FF7C0219" FontFamily="Comic Sans MS" FontWeight="Bold">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFDFDFDF" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
     </Grid>
+
 </UserControl>

@@ -60,6 +60,9 @@
     <Compile Include="AddMatch.xaml.cs">
       <DependentUpon>AddMatch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddStadium.xaml.cs">
+      <DependentUpon>AddStadium.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DeleteMatch.xaml.cs">
       <DependentUpon>DeleteMatch.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>fifaDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="fifaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fifaDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Match.cs" />
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
@@ -89,6 +97,7 @@
     <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Stadium.cs" />
     <Compile Include="Team.cs" />
     <Compile Include="User.cs" />
     <Page Include="AddGoal.xaml">
@@ -96,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddStadium.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,6 +193,17 @@
     <None Include="fifaDataSet2.xss">
       <DependentUpon>fifaDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="fifaDataSet3.xsc">
+      <DependentUpon>fifaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="fifaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fifaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fifaDataSet3.xss">
+      <DependentUpon>fifaDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -193,6 +217,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagen_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="russia2018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="botonGuardar.png" />
+    <Resource Include="buscar.png" />
+    <Resource Include="button-salir.png" />
+    <Resource Include="eliminar.png" />
+    <Resource Include="game.png" />
+    <Resource Include="gol.png" />
+    <Resource Include="img-russia.png" />
+    <Resource Include="loginbutton.png" />
+    <Resource Include="modificar.png" />
+    <Resource Include="Pictograma_Estadio.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -27,11 +27,14 @@ namespace Fifa
             this.userId = userId;
             Connection.LoadTeams(cbLocal);
             Connection.LoadTeams(cbVisit);
+            Connection.LoadStadiums(cbStadium);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) {
-            if (new Match((cbLocal.SelectedItem as Team), (cbVisit.SelectedItem as Team), dpDate.Text).SaveMatch(userId) > 0) {
+            if (new Match((cbLocal.SelectedItem as Team), (cbVisit.SelectedItem as Team), dpDate.Text, (cbStadium.SelectedItem as Stadium)).SaveMatch(userId) > 0) {
                 MessageBox.Show("Partido guardado!");
+                cbLocal.SelectedIndex = cbVisit.SelectedIndex = cbStadium.SelectedIndex = 0;
+
             } else {
                 MessageBox.Show("Ocurrió un error al guardar");
             }
